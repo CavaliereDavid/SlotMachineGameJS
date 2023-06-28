@@ -5,13 +5,13 @@
 .container{
     border: 10px solid black;
     width: 600px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
-    display: table;
 }
 .item{
-    font-size: 200px;
+    font-size: 140px;
     width: 200px;
+    height: 200px;
     text-align: center;
-    display: table-cell;
 }
