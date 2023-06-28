@@ -79,10 +79,18 @@ function award() {
     (items[1][0] == items[1][1] && items[1][1] == items[1][2]) ||
     (items[2][0] == items[2][1] && items[2][1] == items[2][2]) ||
     (items[0][0] == items[1][1] && items[1][1] == items[2][2]) ||
-    (items[0][2] == items[1][1] && items[1][1] == items[0][2])
+    (items[0][2] == items[1][1] && items[1][1] == items[2][0])
   ) {
     coins = coins * 2;
-    message.innerHTML = 'Complimenti, hai vinto!';
+    if (coins < 100) {
+      message.innerHTML = 'Complimenti, hai vinto!';
+    }
+    else {
+      message.innerHTML =
+        'Vincità massima, congratulazioni! Torna alla <a href="index.html">pagina principale</a>';
+      document.querySelector('#spin').disabled = true;
+    }
+    
   } else {
     coins = coins - 1;
     if (coins > 0) {
